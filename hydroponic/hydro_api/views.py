@@ -54,7 +54,6 @@ class MeasurementView(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = StandardResultsSetPagination
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
-    #filterset_fields = ['ph', 'water_temperature', 'tds']
     filterset_class = MeasurementFilter
     ordering_fields = ['ph', 'water_temperature', 'tds']
 
