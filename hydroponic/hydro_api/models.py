@@ -4,6 +4,7 @@ from django.db import models
 
 
 class HydroponicSystem(models.Model):
+    """Model representing a hydroponic system belonging to a user."""
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
@@ -15,6 +16,7 @@ class HydroponicSystem(models.Model):
 
 
 class Measurement(models.Model):
+    """Model storing measurements of hydroponic system parameters."""
     system = models.ForeignKey(HydroponicSystem, on_delete=models.CASCADE)
     ph = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(14)])
     water_temperature = models.DecimalField(max_digits=5, decimal_places=2)
