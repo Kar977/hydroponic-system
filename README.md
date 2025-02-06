@@ -13,7 +13,7 @@ An application for managing a hydroponic system, allowing remote control and mon
 ## Setup
 
 1. Clone the repository:
-   ```git clone https://github.com/your_username/hydroponic-system-management.git```
+   ```git clone https://github.com/Kar977/hydroponic-system.git```
 
 2. Change to the project directory:
    ```cd hydroponic```
